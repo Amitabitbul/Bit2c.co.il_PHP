@@ -29,6 +29,14 @@
 				else
 					$str .= '&';
 				
+                if($key == 'IsBid')
+                {
+                    if( strlen($val) == 0 )
+                        $val = 'false';
+                    else
+                        $val = 'true';
+                }
+                    
 				$str .= "{$key}={$val}";
 			}
 			return ($str);
